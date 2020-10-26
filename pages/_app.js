@@ -1,6 +1,9 @@
-import '../styles/tailwind.css'
-import Head from 'next/head'
+import React from "react";
+import App from "next/app";
+import "../styles/tailwind.css";
+import Head from "next/head";
 import Layout from "../components/Layout";
+import withData from "../lib/apollo";
 
 function MyApp({ Component, pageProps }) {
   return (<div>
@@ -13,4 +16,4 @@ function MyApp({ Component, pageProps }) {
     </div>)
 }
 
-export default MyApp
+export default withData(MyApp)
