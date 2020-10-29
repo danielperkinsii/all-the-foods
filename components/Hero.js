@@ -22,7 +22,7 @@ export default function Hero(props){
                     <div className="flex">
                     <div className="px-2">
                         {user ? ( 
-                        <h5>{user.username}</h5> 
+                        <h5>Welcome, {user.username}</h5> 
                         ) : ( 
                         <Link href="/register">Sign Up</Link> 
                         )}
