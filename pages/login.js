@@ -23,7 +23,7 @@ export default function Login(props) {
     return (
       <div>
         <Hero />
-        <div className="w-full lg:w-1/3 mx-auto">
+        <div className="w-full lg:w-1/3 mx-auto shadow-lg">
         <div className="bg-gray-400 flex flex-col justify-center content-center py-12 mt-20 sm:my-16 sm:px-6 lg:px-8">
           <div className="mx-auto"><h2 className="mx-auto text-3xl leading-9 tracking-tight font-extrabold sm:text-4xl sm:leading-10 text-white ml-12">All the Foods.</h2><h2 className="mx-auto text-3xl leading-9 tracking-tight font-extrabold sm:text-4xl sm:leading-10 text-white -mt-6 md:mt-1 ml-6 text-red-400">All the Foods.</h2><h2 className="mx-auto text-3xl leading-9 tracking-tight font-extrabold sm:text-4xl sm:leading-10 text-white -mt-6 md:mt-1 text-red-800">All the Foods.</h2></div>
             <p className="mt-2 text-center text-md text-sm leading-5 pb-8">
