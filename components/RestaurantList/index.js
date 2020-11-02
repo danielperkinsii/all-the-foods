@@ -37,16 +37,18 @@ function RestaurantList(props) {
                         {searchQuery.map((res) => (
                             <div className="flex flex-col rounded-lg shadow-lg overflow-hidden" key={res.id}>
                                 <div className="flex-shrink-0">
-                                    <img className="h-48 w-full object-cover" top={true} src={`${process.env.NEXT_PUBLIC_API_URL}${res.image[0].url}`} />
+                                    <img className="h-48 w-full object-cover" src={`${process.env.NEXT_PUBLIC_API_URL}${res.image[0].url}`} />
                                 </div>
                                 <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                                     <div className="flex-1">
                                         <p className="text-sm leading-5 font-medium text-indigo-600">
-                                            <a href="#" className="hover:underline">
+                                        <Link
+                                as={`/restaurants/${res.id}`}
+                                href={`/restaurants?id=${res.id}`}><a href="#" className="hover:underline">
                                             {res.name}
-                                            </a>
+                                            </a></Link>
                                         </p>
-                                        <a href="#" className="block">
+                                        <div className="block">
                                         <h3 className="mt-2 text-xl leading-7 font-semibold text-gray-900">
                                         Located in {res.neighborhood}
                                         </h3>
@@ -56,10 +58,9 @@ function RestaurantList(props) {
                                         <p className="mt-3 text-base leading-6 text-gray-500">
                                         {res.description}
                                         </p>
-                                        </a>
+                                        </div>
                                     </div>
                                     <div className="mt-6 flex flex-row items-center">
-                                        
                                         <div className="ml-3">
                                         <div className="flex text-sm leading-5 font-medium text-gray-900">
                                         Delivery: {res.delivery ? (
